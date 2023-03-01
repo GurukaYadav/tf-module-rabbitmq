@@ -15,7 +15,7 @@ resource "aws_spot_instance_request" "instance" {
 resource "aws_ec2_tag" "tag" {
   resource_id = aws_spot_instance_request.instance.spot_instance_id
   key         = "Name"
-  value       = "local.TAG_NAME"
+  value       = local.TAG_NAME
 }
 
 
