@@ -8,7 +8,7 @@ resource "aws_security_group" "sg" {
     from_port        = var.PORT
     to_port          = var.PORT
     protocol         = "tcp"
-    cidr_blocks      = var.PRIVATE_SUBNET_CIDR[0]
+    cidr_blocks      = var.PRIVATE_SUBNET_CIDR
   }
 
   ingress {

@@ -14,7 +14,7 @@ data "aws_ami" "ami" {
 }
 
 data "aws_ec2_spot_price" "spot_price" {
-  instance_type     = "t3.medium"
+  instance_type     = var.INSTANCE_TYPE
   availability_zone = data.aws_subnet.selected.availability_zone
 
   filter {
@@ -24,7 +24,7 @@ data "aws_ec2_spot_price" "spot_price" {
 }
 
 data "aws_subnet" "selected" {
-  id = "subnet-0c36349846844693b"
+  id = var.PRIVATE_SUBNET_ID[0]
 }
 
 output "avinash" {
