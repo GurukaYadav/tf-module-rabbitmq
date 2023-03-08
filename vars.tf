@@ -7,3 +7,4 @@ variable "WORKSTATION_IP" {}
 variable "PRIVATE_SUBNET_ID" {}
 variable "PROJECT" {}
 variable "ENV" {}
+variable "PRIVATE_HOSTED_ZONE_ID" {}
