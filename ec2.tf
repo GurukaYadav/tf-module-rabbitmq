@@ -20,6 +20,9 @@ resource "aws_ec2_tag" "tag" {
 
 
 resource "null_resource" "null" {
+  triggers = {
+    abc = timestamp()
+  }
   provisioner "remote-exec" {
     connection {
       type     = "ssh"
